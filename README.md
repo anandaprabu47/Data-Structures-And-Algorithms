@@ -11,10 +11,18 @@ The significance of Big O notation lies in its ability to help developers compar
 
 **So, why is a logarithm used when measuring complexity, and what does it tell us about an algorithm’s efficiency**?
 
-Logarithms show up in complexity because they represent repeated halving (or dividing) of a problem. When an algorithm uses a strategy like “divide and conquer,” it breaks a large problem into smaller parts with each step. The number of steps it takes to solve the problem grows slowly compared to the size of the input. So, if you double the input size, you only need one more step to finish.
+In complexity analysis, logarithms (specifically, the base-2 logarithm, log₂) represent the concept of repeated halving or division. When an algorithm reduces the problem size by a fixed fraction each time (for example, cutting it in half), it performs a logarithmic number of steps relative to the input size.
 
-Imagine a phone book with thousands of names in alphabetical order. If you’re looking for one specific name, instead of starting from the beginning and searching each name, you could open the book near the middle. From there, if the name you want is in the first half, you ignore the second half entirely. Each time you check, you only need to look at half the remaining list.
+Here's how it works:
 
-This type of searching is known as **binary search**, and it’s an example of an O(log n) algorithm.
+Logarithmic complexity, denoted as O(log n), describes an algorithm that scales by dividing the problem size repeatedly. This is because the logarithm (log₂ n) counts **how many times you can divide n by 2 before reaching 1**. For example:
+  - For 16 items, log₂(16) = 4, meaning it takes 4 divisions (steps) to reach 1.
+  - For 1024 items, log₂(1024) = 10, meaning it takes 10 divisions.
 
-When an algorithm has logarithmic complexity (O(log n)), it means it’s very efficient for large inputs because it only needs a few extra steps as the input size increases. In practical terms, this tells us that algorithms like binary search are great for large data sets, as they require far fewer steps to complete than an O(n) (linear) or O(n²) (quadratic) algorithm would.
+ Using logarithms in complexity tells us that even as inputs grow very large, the steps required increase only slightly. This small increase represents the slow, manageable growth in steps, making the algorithm efficient for large input
+
+ When we measure complexity, we want to describe how fast an algorithm scales with larger inputs. **Logarithmic functions naturally model scenarios where an algorithm only needs a few more steps for large increases in input size**.
+
+So, logarithms are a way to express that **even though the input size grows exponentially, the algorithm’s steps grow slowly**, making it an efficient approach. In binary search, for example, every time you check an item, the remaining items are halved, so it only needs log₂(n) steps to reach the solution, even for huge lists.
+
+Logarithmic growth describes scenarios where the **effort doesn’t match the input size directly** (like O(n)) but instead only grows at a small rate relative to it—logarithms help us capture and measure this efficiency.
