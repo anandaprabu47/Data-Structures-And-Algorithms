@@ -35,7 +35,7 @@ The "1" in O(1) represents a constant value. This indicates that the operation i
 
 **Examples of O(1)**:
 1. **Accessing an Array Element**:
-   - For example, if you have an array and you want to access the element at index 5, it takes the same amount of time to get that element, regardless of how large the array is.
+   - For example, if you have an array and you want to access the element at index 2, it takes the same amount of time to get that element, regardless of how large the array is.
    - Code Example:
      ```Java
      public class ConstantTimeExample {
@@ -59,5 +59,7 @@ The "1" in O(1) represents a constant value. This indicates that the operation i
    - Code example :
      ```Java
        int number=10;
+
+  **O(1)** indicates a fixed time complexity that does not change with the size of the input. This is often the most desirable complexity because it implies that an operation is performed very quickly and efficiently, regardless of how much data is being processed.
    
    
