@@ -34,32 +34,13 @@ Logarithmic growth describes scenarios where the **effort doesn’t match the in
 The "1" in O(1) represents a constant value. This indicates that the operation is not affected by the size of the input data (n).
 
 **Examples of O(1)**:
-1. **Accessing an Array Element**:
+- **Accessing an Array Element**:
    - For example, if you have an array and you want to access the element at index 2, it takes the same amount of time to get that element, regardless of how large the array is.
-   - Code Example:
-     ```Java
-     public class ConstantTimeExample {
-     
-          public static void main(String[] args) {
-            // Create an array of integers
-            int[] numbers = {10, 20, 30, 40, 50};
-
-            // Access an element at a specific index
-            int index = 2; // We want to access the element at index 2
-            int element = numbers[index]; // Accessing the element takes O(1) time
-
-          // Print the accessed element
-            System.out.println("Element at index " + index + ": " + element);
-        }
-      }
-    ```Output
-      Element at index 2: 30
-2. **Simple Variable Assignment**:
+- **Simple Variable Assignment**:
    - Assigning a value to a variable is also an O(1) operation because it does not depend on the size of any other data structure.
-   - Code example :
-     ```Java
-       int number=10;
 
-  **O(1)** indicates a fixed time complexity that does not change with the size of the input. This is often the most desirable complexity because it implies that an operation is performed very quickly and efficiently, regardless of how much data is being processed.
+     
+**O(1)** indicates a fixed time complexity that does not change with the size of the input. This is often the most desirable complexity because it implies that an operation is performed very quickly and efficiently, regardless of how much data is being processed.
    
-   
+2. ### O(log n) - Logarithmic Time Complexity
+     An algorithm has logarithmic time complexity when its execution time increases logarithmically as the size of the input data (n) increases. This means that the algorithm reduces the problem size significantly with each step, usually by a factor (commonly halving the input size).
