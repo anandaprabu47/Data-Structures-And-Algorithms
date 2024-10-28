@@ -26,3 +26,38 @@ Logarithmic complexity, denoted as O(log n), describes an algorithm that scales 
 So, logarithms are a way to express that **even though the input size grows exponentially, the algorithm’s steps grow slowly**, making it an efficient approach. In binary search, for example, every time you check an item, the remaining items are halved, so it only needs log₂(n) steps to reach the solution, even for huge lists.
 
 Logarithmic growth describes scenarios where the **effort doesn’t match the input size directly** (like O(n)) but instead only grows at a small rate relative to it—logarithms help us capture and measure this efficiency.
+
+## Comprehensive List of Big O Notations
+ 1. ### O(1) - Constant Time Complexity
+    An algorithm is said to have O(1) complexity when its execution time is the same no matter how large the input size is. This means that it takes a fixed amount of time to complete, no matter if you're working with one item or a million items.
+### Why "1"?
+The "1" in O(1) represents a constant value. This indicates that the operation is not affected by the size of the input data (n).
+
+**Examples of O(1)**:
+1. **Accessing an Array Element**:
+   - For example, if you have an array and you want to access the element at index 5, it takes the same amount of time to get that element, regardless of how large the array is.
+   - Code Example:
+     ```Java
+     public class ConstantTimeExample {
+     
+          public static void main(String[] args) {
+            // Create an array of integers
+            int[] numbers = {10, 20, 30, 40, 50};
+
+            // Access an element at a specific index
+            int index = 2; // We want to access the element at index 2
+            int element = numbers[index]; // Accessing the element takes O(1) time
+
+          // Print the accessed element
+            System.out.println("Element at index " + index + ": " + element);
+        }
+      }
+    ```Output
+      Element at index 2: 30
+2. **Simple Variable Assignment**:
+   - Assigning a value to a variable is also an O(1) operation because it does not depend on the size of any other data structure.
+   - Code example :
+     ```Java
+       int number=10;
+   
+   
